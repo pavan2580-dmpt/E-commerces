@@ -1,0 +1,124 @@
+.contactUs_page_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap:wrap;
+
+}
+.contact_leftside_data{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.contacrUs_part_right_side_data{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact_left_header{
+    display: flex;
+    width: fit-content;
+    gap: 20px;
+    align-items: center;
+}
+.contact_left_header span{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(219, 68, 68, 1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.contact_left1{
+    width: 350px;
+    height: 170px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+.contact_left1 p{
+    padding-bottom: 20px;
+}
+.contactUs_name{
+    border: none;
+    outline: none;
+    background-color:rgb(208, 208, 208) ;
+    font-size: 20px;
+    height: 45px;
+    margin: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-left: 20px;
+}
+.contactUs_textArea{
+    width: 80%;
+    margin-left: 10px;
+    height: 40%;
+    background-color: rgb(208, 208, 208) ;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    outline: none;
+}
+.contactUs_inputArea{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+.ContactUs_button_div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+.ContactUs_button_div button{
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 10px 20px;
+    background-color: rgba(219, 68, 68, 1);
+    cursor: pointer;
+}
+@media screen and (min-width:600px) {
+
+    .contactUs_page_container{
+        padding: 20px 0px;
+        align-items: center;
+        justify-content: center;
+    }
+.contact_leftside_data{
+    width: fit-content;
+}
+    
+.contacrUs_part_right_side_data{
+    width: 50%;
+    align-items: center;
+
+}
+.contactUs_textArea{
+    height: 300px;
+    padding: 10px 0px 0px 10px;
+}
+}
+
+@media screen and (min-width:900px){
+    .contactUs_page_container{
+        justify-content: center;
+        align-items:center;
+    }
+    .contacrUs_part_right_side_data{
+        gap: 30px;
+    }
+    .contactUs_textArea{
+        width: 95%;
+    }
+}

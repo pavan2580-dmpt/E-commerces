@@ -1,0 +1,123 @@
+.About_page_container{
+    width: 100%;
+    height: auto;
+}
+.about_start_main_part{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.about_start_leftside_part {
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding: 0px 20px;
+width: 100%;
+}
+.about_start_leftside_part p{
+    font-size: 20px;
+}
+.about_start_rightside_part{
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+.about_page_website_story_icons_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.about_page_story_icons_1_container{
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.about_page_story_icons_1_container:hover{
+    background-color: rgba(219, 68, 68, 1);
+    border: none;
+    color: white;
+}
+.about_page_outter{
+    width: 100px;
+    height: 100px;
+    background-color:rgb(110, 110, 110);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about_page_inner{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+}
+@media screen and (min-width:600px) {
+    .about_start_main_part{
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    
+    }
+    .about_start_leftside_part{
+        width: 50%;
+    }
+    .about_start_rightside_part{
+        width: 50%;
+    }
+}
+@media screen and (min-width:1000px) {
+
+.about_start_main_part h1{
+    font-size: 50px;
+}
+
+.about_start_main_part p{
+    font-size: 25px;
+}
+}
+
+.about_page_comapany_members_details_container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+}
+
+.about_company_member{
+    width: 250px;
+    height: 400px;
+}
+.insta:hover{
+    color: palevioletred;
+    cursor: pointer;
+}
+.twitter:hover{
+    color: rgb(61, 170, 213);
+    cursor: pointer;
+}
+.linkdin:hover{
+    color: blue;
+    cursor: pointer;
+}

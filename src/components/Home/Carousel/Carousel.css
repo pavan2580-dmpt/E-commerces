@@ -1,0 +1,20 @@
+.image-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-slide {
+    display: none;
+    transition: opacity 1s;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-slide.active {
+    display: block;
+    opacity: 1;
+  }

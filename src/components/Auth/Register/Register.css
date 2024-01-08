@@ -1,0 +1,90 @@
+.Register_page_main_container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.register_page_container_left_part_image_for_desktop{
+    width: 60%;
+    height: 80vh;
+    display: none;
+}
+.register_page_right_part{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+
+}
+.register_page_right_part form{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.register_name{
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    font-size:25px ;
+    padding-left: 10px;
+    outline: none;
+}
+.Create_account_button{
+    color: white;
+    background-color: rgba(219, 68, 68, 1);
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.register_page_right_part span{
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+}
+.register_page_p{
+    text-align: center;
+}
+@media screen and (min-width:600px) {
+
+    .register_page_right_part{
+        width: 70%;
+    }
+}
+@media screen and (min-width:600px) {
+
+    .register_page_right_part{
+        width: 70%;
+    }
+    }
+
+
+    @media screen and (min-width:700px) {
+
+        .register_page_right_part{
+            width: 30%;
+            gap: 50px;
+        }
+        
+
+
+    .register_page_container_left_part_image_for_desktop{
+        display: block;    
+    }
+        }
+
+
+
+
+
+
+
+
+

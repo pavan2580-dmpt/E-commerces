@@ -1,0 +1,234 @@
+.product_page_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.product_page_image{
+    width: 80%;
+    height: auto;
+}
+.product_page_productData{
+    width: 80%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.select_size_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.Select_product_sizes_main_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+}
+.select_size{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.select_size:hover{
+    background-color: rgba(219, 68, 68, 1);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+.product_count_divsion{
+    width: 200px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+}
+.count_sub{
+    width: 30%;
+    height: 40px;
+    border-right: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.count_sub:hover,.count_add:hover{
+    background-color: rgba(219, 68, 68, 1) ;
+    color: white;
+    cursor: pointer;
+}
+.count_val{
+    width: 60%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.count_add{
+    width: 30%;
+    height: 40px;
+    border-left: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_buyNowButton button{
+    width: 200px;
+    height: 40px;
+    background-color: rgba(219, 68, 68, 1) ;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.product_buyNowButton button:hover{
+    background-color: rgb(180, 21, 21) ;
+}
+
+.product_add_to_wishlist_btn,.add_to_cart_button_for_detailed_product{
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.product_add_to_wishlist_btn:hover,.add_to_cart_button_for_detailed_product:hover{
+    background-color: red;
+    overflow: hidden;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.shipping_the_product{
+    width: 340px;
+    height: fit-content;
+    display: flex;
+    border: 1px solid;
+    gap: 20px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+
+@media screen and (min-width:740px) {
+    .shipping_the_product{
+        width: 420px;
+    }
+    
+}
+.shipping_the_product p{
+    text-decoration: underline;
+}
+.shopping_options_for_products{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+@media screen and (min-width:700px) {
+.product_page_image{
+    width: 30%;
+}
+
+    .product_righthand_side{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.products_review_section_main_container{
+    width: 100%;
+    height: auto;
+    padding-left:40px;
+}
+.review_user_data{
+    width: 100%;
+    margin-top: 30px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.review_user_logo{
+    width: fit-content;
+    height: fit-content;
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+.user_ratting_section{
+    display: flex;
+    align-items: center;
+}
+.products_review_section_main_container p{
+    width: 80%;
+    padding: 10px;
+}
+.about_theProduct_data{
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+li{
+  padding: 10px 3px;
+  list-style-type: disc;
+  line-height: 30px;
+    
+}
+
+@media screen and (min-width:780px) {
+li{
+    width: 60%;
+}
+.about_theProduct_data h1{
+    text-align: end;
+    margin-right: 30%;
+}
+
+}
+
+@media screen and (min-width:950px) {
+
+    .products_review_section_main_container p{
+    width: 50%;
+}
+}
+
+@media screen and (min-width:1200px) {
+    li{
+        width: 50%;
+    }
+
+}
