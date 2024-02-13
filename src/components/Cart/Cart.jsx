@@ -14,7 +14,9 @@ function ShowCartItemFromLocal({SetCost}) {
   const [Total,SetTotal] = useState(0);
 
   useEffect(() => {
-    const myArray = JSON.parse(localStorage.getItem('AddToCart')) || [];
+    // const myArray = JSON.parse(localStorage.getItem('AddToCart')) || [];
+    const storedData = localStorage.getItem('AddToCart');
+    const myArray = storedData ? JSON.parse(storedData) : [];
     setItems(myArray); 
     Cookies.set("length", myArray.length)
     SetCartCtn(myArray.length)

@@ -21,8 +21,12 @@ import {AiOutlineEye,AiOutlineHeart,AiFillHeart} from "react-icons/ai"
 import {FcPhoneAndroid,FcCompactCamera} from "react-icons/fc"
 import {RiComputerFill} from "react-icons/ri"
 import {FaHeadphonesAlt} from "react-icons/fa"
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+import { CiCamera } from "react-icons/ci";
+import { IoWatchOutline } from "react-icons/io5";
+import { RiComputerLine } from "react-icons/ri";
 import {IoLogoGameControllerB} from "react-icons/io"//icons -- End
-
+import { LuGamepad } from "react-icons/lu";
 import { ToastContainer, toast } from 'react-toastify';//toast
 import 'react-toastify/dist/ReactToastify.css';//toast
 
@@ -99,7 +103,8 @@ function Products(props){
   const navigate = useNavigate();
 
   function AddToLocalCart(img,val,id){
-    let existingCart = JSON.parse(localStorage.getItem('AddToCart')) || [];
+    let existingCart = localStorage.getItem('AddToCart');
+    existingCart = existingCart ? JSON.parse(existingCart) : [];
     if (!Array.isArray(existingCart)) {
       existingCart = [];
     }
@@ -216,27 +221,7 @@ function Home() {
        SetLoader(false)
     }
   ,[])
-  // --------------------------------------------------------------------------------
-  // useEffect(() => {
-  //   if (InputSearch.trim() === "") {
-  //     SetGet(allPosts.slice(0,8));
-  //     //
-  //   } else {
-  //     const resp = allPosts.filter((data) => {
-  //       return (
-  //         data.name.toLowerCase().includes(InputSearch.toLowerCase()) ||
-  //         data.desc.toLowerCase().includes(InputSearch.toLowerCase()) ||
-  //         data.cate.toLowerCase().includes(InputSearch.toLowerCase()) ||
-  //         data.recomend.toLowerCase().includes(InputSearch.toLowerCase())
-  //       );
-  //     });
-  //     SetGet(resp); 
-  //   }
-  // }, [InputSearch, allPosts]); 
-  
 
-
-// ---------------------------------
  const GETALL = GETS.map((post)=>(
   <Products 
   key={post._id}
@@ -438,26 +423,25 @@ const images = [
             <div className="Home_page_browse_byCate_container_main">
               <h3>Categories</h3>
               <h1>Browse by Category</h1>
-  
              <div className="home_page_browseBtIcons_main_container">
              <div className="home_page_browse_icon_container">
-                  <FcPhoneAndroid size={100}/>
+                  <HiOutlineDevicePhoneMobile size={100}/>
               </div>
   
               <div className="home_page_browse_icon_container">
-                  <FcCompactCamera size={100}/>
+                  <CiCamera size={100}/>
               </div>
               <div className="home_page_browse_icon_container">
-                  <BsSmartwatch size={100}/>
+                  <IoWatchOutline size={100}/>
               </div>
               <div className="home_page_browse_icon_container">
-                  <RiComputerFill size={100}/>
+                  <RiComputerLine size={100}/>
               </div>
               <div className="home_page_browse_icon_container">
                   <FaHeadphonesAlt size={100}/>
               </div>
               <div className="home_page_browse_icon_container">
-                  <IoLogoGameControllerB size={100}/>
+                  <LuGamepad size={100}/>
               </div>
   
              </div>
@@ -543,16 +527,7 @@ const images = [
   
         </div>
       </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
         </div>
       </div>
       </>

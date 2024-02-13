@@ -15,6 +15,7 @@
     width: 80%;
     height: auto;
     margin-bottom: 30px;
+    padding-left: 15px;
 }
 
 .select_size_container{
@@ -126,6 +127,7 @@
     gap: 20px;
     padding: 10px 0px;
     box-sizing: border-box;
+    margin-left: 15px;
 }
 
 

@@ -18,7 +18,7 @@
     color: rgb(0, 255, 102);
     cursor: pointer;
     display: flex;
-
+    justify-content: space-between;
 }
 .homePage_discount_timer_setup_here______container{
     width: 100%;
@@ -47,15 +47,17 @@
     gap: 10px;
 }
 .homepage_mobile_categories{
-    width: 88.8%;
+    width: 92.8%;
     height: auto;
     background-color: white;
     font-size: 25px;
     padding-left: 20px;
-    z-index: 20;
+    z-index: 10;
     position: absolute;
     box-sizing: border-box;
     overflow: hidden;
+    border:1px solid;
+    border-top:none;
 }
 .homepage_mobile_categories p{
     padding: 15px;
@@ -424,6 +426,7 @@
 .home_page_browse_icon_container:hover{
     background-color:  rgba(219, 68, 68, 1);
     border: none;
+    color: white;
     cursor: pointer;
 }
 @media screen and (min-width:800px) {

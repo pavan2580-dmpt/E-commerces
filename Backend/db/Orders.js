@@ -6,8 +6,28 @@ const Orders = mongoose.Schema({
         type:String,
         required:true
     },
-    orders:{
+    name:{
         type:String,
+        required:true
+    },
+    phno:{
+        type:String,
+        required:true
+    },
+    street:{
+        type:String,
+        required:true
+    },
+    apt:{
+        type:String,
+        required:true
+    },
+    tc:{
+        type:String,
+        required:true
+    },
+    orders:{
+        type:Array,
         required:true
     }
 })

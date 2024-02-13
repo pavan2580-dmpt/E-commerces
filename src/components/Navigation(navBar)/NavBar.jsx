@@ -34,7 +34,8 @@ import CartContext from '../Context/CartContext'
  
   useEffect(
     ()=>{
-      const myArray = JSON.parse(localStorage.getItem('AddToCart')) || [];
+      const storedData = localStorage.getItem('AddToCart');
+      const myArray = storedData ? JSON.parse(storedData) : [];
       const itemlength = myArray.length
       SetCartCtn(itemlength)
 
@@ -63,7 +64,7 @@ import CartContext from '../Context/CartContext'
                 </div>
                 {/* -------------  Mobile Navigation ---------------------- */}
                 <div>
-                    <RxHamburgerMenu className='ShowInMobile' size={40} onClick={handleToggle}/>
+                    <RxHamburgerMenu className='ShowInMobile' style={{cursor:'pointer'}} size={40} onClick={handleToggle}/>
                 </div>
                 {/* ------------- DeskTop Navigation ----------------------- */}
                        <div className="navBar_options">
@@ -145,7 +146,9 @@ import CartContext from '../Context/CartContext'
                                </Link>
                               </div>
                               <div className='options_for_loged_users'>
-                                <RiShoppingBag3Line/> My Order
+                                <Link  to={'/myOrders'} className='link'>
+                                      <RiShoppingBag3Line/> My Order
+                                </Link>
                               </div>
                               <div className='options_for_loged_users'onClick={()=>{
                                 Cookies.set('Logged',false)
@@ -155,11 +158,35 @@ import CartContext from '../Context/CartContext'
                                   <TbLogout2/> Logout
                               </div>
                              </div>
+                             
                              </>
                           
                       </div>
         
           </div>
+          
+    </div>
+    <div className='Search_bar_for_mobile_navigation'>
+    <div className='navbar-mobiles-Searching'>
+         <input type="text" 
+           placeholder='Search'
+           className='Search_bar_formedium_smal_dev'
+            value={Search} ref={getval} 
+            onChange={
+              (e)=>
+                {
+                  SetSearch(e.target.value)
+                  Cookies.set("search",getval.current.value)                                
+                  if((getval.current.value).length === 0){
+                        navigation('/')
+                    }else if(location.pathname ==="/search" && (getval.current.value).length !== 0 ){                                                      
+                   }
+                   else{
+                     navigation('/search')
+                   }
+         }} /><BiSearch/>
+         </div>
+      
     </div>
     <Outlet />
     </>

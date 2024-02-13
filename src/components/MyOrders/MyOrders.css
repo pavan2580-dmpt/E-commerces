@@ -1,0 +1,191 @@
+.Main-container-for-orders{
+    width: 100%;
+    min-height: 90vh;
+    max-height: fit-content;
+    padding: 20px;
+    box-sizing: border-box;
+}
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+ 
+  
+.cookieCard {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right,rgb(137, 104, 255),rgb(175, 152, 255));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cookieCard::before {
+    width: 150px;
+    height: 150px;
+    content: "";
+    background: linear-gradient(to right,rgb(142, 110, 255),rgb(208, 195, 255));
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    right: -25%;
+    top: -25%;
+  }
+  
+  .cookieHeading {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(241, 241, 241);
+    z-index: 2;
+  }
+  
+  .cookieDescription {
+    font-size: 20px;
+    color: rgb(241, 241, 241);
+    z-index: 2;
+  }
+  
+  .cookieDescription a {
+    color: rgb(241, 241, 241);
+  }
+  
+  .acceptButton {
+    padding: 11px 20px;
+    background-color: #7b57ff;
+    transition-duration: .2s;
+    border: none;
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 2;
+  }
+  
+  .acceptButton:hover {
+    background-color: #714aff;
+    transition-duration: .2s;
+  }
+
+
+
+
+
+
+
+  .card {
+    position: relative;
+    display: block;
+    height: 350px;
+    width: 350px;  
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px 10px gainsboro;
+    overflow: hidden;
+    text-decoration: none;
+    border: 2px solid;
+  }
+  
+  .card__image {      
+    width: 200px;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: 10px;    
+    background-color: var(--surface-color); 
+    font-size: 20px;     
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .8em; 
+    color: #bdc2d7;  
+  }
+  
+  .card__status {
+    font-size: 25px;
+    color: #000000;
+  }
+  
+  .card__description {
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    color: #000000;
+    font-family: "MockFlowFont"; 
+    font-size: 25px;  
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }       
+  .Order-Shpping{
+    color: green;
+  }
+  .user-client-order-details{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 20px;
+
+  }

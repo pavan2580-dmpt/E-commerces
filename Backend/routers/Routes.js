@@ -165,19 +165,24 @@ routes.route('/PlaceOrders').post(
     async(req,res)=>{
 
        try {
-        const { orders,email } = req.body;
-        console.log('Received firstStrings:', orders);
+        const { orders,email,name,phno,street,apt,tc } = req.body;
         console.log('Received secondStrings:', email);
-        const ResponseDataIS = await Orders.insert({
-            userEmail:email,
-            orders:orders,
-
-        })
+        const ordersModel = new Orders({
+            userEmail: email,
+            orders: orders,
+            name:name,
+            phno:phno,
+            street:street,
+            apt:apt,
+            tc:tc
+          });
+      
+       const ResponseDataIS = await ordersModel.save();
        if(ResponseDataIS){
-        res.status(200).json({ message: 'Received arrays of strings successfully' });
+        res.status(200).json({ message: 'Order placed successfully' });
        }
        else{
-        res.status(400).json({ message: 'Error' })
+        res.status(400).json({ message: 'Unable to place order' })
        }
 
         
@@ -187,7 +192,24 @@ routes.route('/PlaceOrders').post(
 
 
     })
+// @ get the oders of a user ----------------
+routes.route("/getTheOrder/:email").get(
+    async(req,res)=>{
+        const {email} = req.params;
+        try {
+            const FindTheOrder = await Orders.find({userEmail:email})
+            if(FindTheOrder){
+                res.send(FindTheOrder)
+            }else{
+                res.send("No Order Yet")
+            }
+        } catch (error) {
+            console.log(error)
+            res.status(500).send(error)
+        }
 
+    }
+)
 
   
 

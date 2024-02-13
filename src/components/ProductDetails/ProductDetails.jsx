@@ -9,6 +9,8 @@ import {HiOutlineRefresh} from"react-icons/hi"
 import { useLocation,useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import Cookies from 'cookies-js';
+import { ToastContainer, toast } from 'react-toastify';//toast
+import 'react-toastify/dist/ReactToastify.css';//toast
 function ProductDetails() {
 
 

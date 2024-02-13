@@ -16,6 +16,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails.jsx'
 import Searched from "./components/SearchedProducts/Searched.jsx"
 import CartContext from './components/Context/CartContext.jsx'
 import Categoreis from './components/Categories/Categoreis.jsx'
+import MyOrders from './components/MyOrders/MyOrders.jsx'
 
 
 
@@ -40,6 +41,7 @@ function App() {
                     <Route path='/productdetails/:id' element={<ProductDetails/>}/>
                     <Route path='/search' element={<Searched/>}/>
                     <Route path='/Categories/:id' element={<Categoreis />} />
+                    <Route path='/myOrders' element={<MyOrders/>}/>
 
                     <Route path='*' element={<Error/>}/>
                 </Route>
