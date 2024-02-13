@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors());
 
 
-mongoose.connect('Enter your mongoose url').then(
+mongoose.connect('process.env.MONOGO_URI').then(
     ()=>{console.log("connected to database...")}
 ).catch(
     (err)=>{console.log("An error occured while connecting to database...")}
