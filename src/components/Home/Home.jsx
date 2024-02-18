@@ -15,22 +15,21 @@ import perfume from "../Home/assets/perfume.png"//img-end
 
 import {FaArrowDown,FaArrowUp} from "react-icons/fa"// icons -- Start
 import {TbTruckDelivery} from "react-icons/tb"
-import {BsHeadset,BsSmartwatch} from "react-icons/bs"
+import {BsHeadset} from "react-icons/bs"
 import {BiCheckShield} from "react-icons/bi"
 import {AiOutlineEye,AiOutlineHeart,AiFillHeart} from "react-icons/ai"
-import {FcPhoneAndroid,FcCompactCamera} from "react-icons/fc"
-import {RiComputerFill} from "react-icons/ri"
+
 import {FaHeadphonesAlt} from "react-icons/fa"
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { CiCamera } from "react-icons/ci";
 import { IoWatchOutline } from "react-icons/io5";
-import { RiComputerLine } from "react-icons/ri";
-import {IoLogoGameControllerB} from "react-icons/io"//icons -- End
+import { RiComputerLine } from "react-icons/ri";//icons -- End
+
 import { LuGamepad } from "react-icons/lu";
 import { ToastContainer, toast } from 'react-toastify';//toast
 import 'react-toastify/dist/ReactToastify.css';//toast
 
-import CartContext from '../Context/CartContext';// context
+// import CartContext from '../Context/CartContext';// context
 
 import HomeLoader from './HomePageLoader/HomeLoader';//loader
 
@@ -99,8 +98,8 @@ function Cards(props){
 }
 
 function Products(props){
-  const [heart,Setheart] = useState(false);
-  const navigate = useNavigate();
+  const [heart,Setheart] = useState(false);//heart icon
+  const navigate = useNavigate();//routing
 
   function AddToLocalCart(img,val,id){
     let existingCart = localStorage.getItem('AddToCart');
@@ -124,6 +123,8 @@ function Products(props){
     theme: "dark"
   });
   }
+
+
 
   return(
     <>

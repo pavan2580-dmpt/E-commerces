@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors());
 
 
-mongoose.connect('Enter your mongoose url').then(
+mongoose.connect('mongodb+srv://pavanganesh:pavanganesh@cluster0.axrs7n2.mongodb.net/E-commers?retryWrites=true&w=majority').then(
     ()=>{console.log("connected to database...")}
 ).catch(
     (err)=>{console.log("An error occured while connecting to database...")}

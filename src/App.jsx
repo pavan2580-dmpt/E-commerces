@@ -22,7 +22,6 @@ import MyOrders from './components/MyOrders/MyOrders.jsx'
 
 
 function App() {
-  const [CartCount,SetCartCount]  = useState(0);
   return (
     <CartContext>
       <BrowserRouter>

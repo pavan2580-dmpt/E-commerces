@@ -49,9 +49,20 @@ import CartContext from '../Context/CartContext'
       <Link  className='link' onClick={handleToggle}  to={'/'} ><h1>Home</h1></Link>
       <Link  className='link' onClick={handleToggle} to={'/contact'} ><h1>Contact</h1></Link>
       <Link  className='link' onClick={handleToggle} to={'/about'} ><h1>About</h1></Link>
-      <Link  className='link' onClick={handleToggle} to={'/cart'} ><h1>Cart</h1></Link>
+      <Link  className='link' onClick={handleToggle} to={'/cart'} ><h1>Cart {CartCtn}</h1></Link>
       <Link  className='link' onClick={handleToggle} to={'/wishlist'} ><h1>Wish list</h1></Link>
       <Link  className='link' onClick={handleToggle} to={'/signup'} ><h1>Sign Up</h1></Link>
+      {
+        Logined === "true" && (
+          <div className=''>
+            <Link className='link' onClick={handleToggle} to={'/account'} ><h1>Manage My Account</h1></Link>
+            <Link className='link' onClick={handleToggle} to={'/myOrders'} > <h1>My Order</h1></Link>
+          </div>
+        )
+      }
+        
+
+
       
 
     </div>
