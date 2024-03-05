@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import NavBar from "./components/Navigation(navBar)/NavBar.jsx"
 import Footer from "./components/Footer/Footer.jsx"
-import {BrowserRouter,Routes,Route } from "react-router-dom"
+import {BrowserRouter,Routes,Route } from "react-router-dom"//route
 import Home from "./components/Home/Home.jsx"
 import Register from "./components/Auth/Register/Register.jsx"
 import Login from "./components/Auth/Login/Login.jsx"

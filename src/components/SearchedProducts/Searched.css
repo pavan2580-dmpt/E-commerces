@@ -17,7 +17,7 @@
     border-radius: 10px;
     cursor: pointer;
     display: flex;
- 
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     gap: 10px;

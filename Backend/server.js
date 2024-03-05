@@ -4,12 +4,12 @@ const mongoose = require('mongoose');
 const cors = require('cors')
 app.use(express.json());
 app.use(cors());
+require("dotenv").config();
 
-
-mongoose.connect('mongodb+srv://pavanganesh:pavanganesh@cluster0.axrs7n2.mongodb.net/E-commers?retryWrites=true&w=majority').then(
+mongoose.connect(process.env.MONGO_URI).then(
     ()=>{console.log("connected to database...")}
 ).catch(
-    (err)=>{console.log("An error occured while connecting to database...")}
+    (err)=>{console.log("An error occured while connecting to database...",err)}
 )
 
 

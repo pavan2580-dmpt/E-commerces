@@ -100,7 +100,7 @@ import CartContext from '../Context/CartContext'
                                   if((getval.current.value).length === 0){
                                     navigation('/')
                                   }else if(location.pathname ==="/search" && (getval.current.value).length !== 0 ){
-                                    
+                                    navigation('/search')
                                       
                                   }
                                   else{
